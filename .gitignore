@@ -1,5 +1,4 @@
 *.pyc
 __pycache__
 djgirl
-db.sqlite3
 .DS_Store
