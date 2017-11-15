@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for classifier in classifiers %}
+        <div class="classifier">
+            <div class="date">
+                {{ classifier.published_date }}
+            </div>
+              <h1><a href="{% url 'prediction' pk=post.pk %}">{{ classifier.title }}</a></h1>
+            <p>{{ classifier.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
